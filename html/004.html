@@ -1,0 +1,59 @@
+<!-- css盒子模型 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 元素尺寸初始化，避免默认样式的影响 */
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        /* 该元素的实际高度和宽度应加上boder+margin+padding */
+        /* /* 可通过 */
+        box-sizing: border-box;
+        /* 使元素实际尺寸不包括boder+margin+padding */
+        border: 1px solid red;
+        /* boder定义顺序为宽度(widt)、样式(none\dotted\dashed\solid\double)、颜色(color) */
+        margin: 100px auto 10px;
+        /* 外边距margin定义顺序为上(-top)、右(-right)（0补位,auto自动居中）、下(-botton)、左(-left)；只定义两个的时候分别是上下、左右 */
+        padding: 0px;
+        /* 内边距 */
+      }
+      .liebiao1 {
+        box-sizing: border-box;
+        width: 100px;
+        margin: 0px auto 10px;
+        padding: 0px 10px;
+        border: 1px solid red;
+      }
+      .liebiao1 ul {
+        list-style: inside;
+        /* 是项目符号在边框里 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <p>hello</p>
+    </div>
+    <!-- 列表样式 -->
+    <div class="liebiao1">
+      <h3>liebiao1</h3>
+      <ul>
+        <li>001</li>
+        <li>002</li>
+        <li>003</li>
+      </ul>
+    </div>
+    <script>
+      // console.log(1 + "3");
+    </script>
+  </body>
+</html>

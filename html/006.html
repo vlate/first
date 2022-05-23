@@ -1,0 +1,86 @@
+<!-- css定位 -->
+<!-- css定位position
+绝对absolute,脱离文档流，以浏览器左上角参照定位/
+相对relative，不脱离文档流，以此元素原始位置为参照/
+固定fixed，脱离文档流，以浏览器视窗定位
+坐标元素（非定位元素不起作用）top/left/right/botton/
+z-index，整数值，默认为0，可以为负数，数值越大的在前方显示 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        width: 100px;
+        height: 100px;
+        border: 1px solid;
+        background-color: rgb(222, 121, 121);
+      }
+
+      .position1 {
+        position: absolute;
+        left: 50px;
+        top: 50px;
+        z-index: 2;
+      }
+      .position2 {
+        position: relative;
+        left: 20px;
+        top: 20px;
+        z-index: -1;
+      }
+      .position3 {
+        position: fixed;
+        left: 30px;
+        top: 30px;
+      }
+      /* 相对父级元素的样式 */
+      .box1 {
+        width: 300px;
+        height: 200px;
+        border: 1px solid;
+        background-color: rgb(121, 210, 222);
+        margin: 0 auto;
+        /* 使此元素居中 */
+        position: relative;
+      }
+      .position6 {
+        position: absolute;
+        /* 此属性配合box1的relative属性使6由据对定位变为相对于父级定位 
+        很少使用父级absolute,子级也是absolute */
+        left: 100px;
+        top: 30px;
+      }
+      /* 右下角固定元素 */
+      body {
+        height: 1000px;
+      }
+      button {
+        position: fixed;
+        right: 100px;
+        bottom: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box position1">1</div>
+    <div class="box position2">2</div>
+    <div class="box position3">3</div>
+    <div class="box position4">4</div>
+    <!-- 相对父级元素 -->
+    <div class="box1 position5">
+      5
+      <div class="box position6">6</div>
+    </div>
+    <!-- 一个右下角固定元素 -->
+    <button><a href="#">up</a></button>
+    <!-- href设为#可以返回顶部 -->
+  </body>
+</html>

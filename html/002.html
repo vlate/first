@@ -1,0 +1,108 @@
+<!-- 表单与表格 -->
+<!--  -->
+<!-- 表格 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>002</title>
+  </head>
+
+  <body>
+    <!-- 以下为列表 -->
+    <table border="1">
+      <!--列表标签-->
+      <tr>
+        <td colspan="4">列表</td>
+        <!--合并行-->
+      </tr>
+      <thead>
+        <!--表头-->
+        <th>序号</th>
+        <th>姓名</th>
+        <th>性别</th>
+      </thead>
+      <tbody>
+        <tr>
+          <!--行-->
+          <td rowspan="3">one</td>
+          <!--合并列-->
+          <td>01</td>
+          <!--单元格-->
+          <td>wang</td>
+          <td>man</td>
+        </tr>
+        <tr>
+          <td>02</td>
+          <td>zhang</td>
+          <td>women</td>
+        </tr>
+        <tr>
+          <td>03</td>
+          <td>li</td>
+          <td>men</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 表单,form标签，常用控件input、select-->
+    <form action="">
+      <label for="username">用户名</label>
+      <input id="username" type="text" placeholder="用户名" />
+      <!-- for属性定义了点击label项字段时跳入input输入框 -->
+      <label for="password">密码</label>
+      <input id="password" type="password" placeholder="密码" />
+      <!-- 下拉框 -->
+      <label for="">性别</label>
+      <select name="" id="">
+        <option value="">A</option>
+        <option value="">B</option>
+      </select>
+      <input type="submit" />
+      <input type="submit" value="登录" />
+      <!-- submit属性具有提交数据功能，button只是一个按钮功能-->
+      <input type="button" value="按钮" />
+      <!--  -->
+      <!-- input具有相同name属性，只能选择一个 -->
+      <label for="">女</label>
+      <input name="sex" type="radio" />
+      <!--单选-->
+      <label for="">男</label>
+      <input name="sex" type="radio" />
+      <!--单选-->
+      <!-- checkbox复选框 -->
+      <input type="checkbox" />
+    </form>
+    <h3>调查问卷</h3>
+    <form action="">
+      <p>
+        <label for="">username</label>
+        <input type="text" placeholder="username" />
+      </p>
+      <p>
+        <label for="">password</label>
+        <input type="text" placeholder="password" />
+      </p>
+      <p>
+        <label for=""> sex</label>
+        <label for="">man</label>
+        <input type="radio" name="01" />
+        <label for="">women</label>
+        <input type="radio" name="01" />
+      </p>
+
+      <p>
+        <label for="">最喜欢的运动</label>
+        <select name="" id="">
+          <option value="">run</option>
+          <option value="">bull</option>
+          <option value="">water</option>
+        </select>
+      </p>
+
+      <input type="submit" />
+    </form>
+  </body>
+</html>

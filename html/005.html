@@ -1,0 +1,34 @@
+<!-- css浮动模型 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* 块元素独立成行,有高度和宽度,如h/p/div/ul/li等 */
+      /* 行内元素不独立成行,没有高度和宽度,如a/span */
+      /* 行内块元素,有高度宽度,但不独立成行,如img/input/button */
+      input {
+        width: 100px;
+      }
+      a {
+        display: block;
+        /* display转换元素属性:bloc块/inline行内/inline-block行内块/none隐藏 */
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <p>001</p>
+    <input type="text" value="input" />
+    <button>001</button>
+    <a href="http://baidu.com">baidu</a>
+
+    <script></script>
+  </body>
+</html>

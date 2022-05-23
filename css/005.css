@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* 为上一及元素清除浮动 */
+
+.clear::after,
+.clear::before {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.liebiao .img {
+  display: block;
+  width: 100px;
+  height: 70px;
+  border: 1px solid;
+  margin: 10px 0px 0px 10px;
+  /* 设置浮动属性 */
+  float: left;
+}
+.wenzi {
+  width: 200px;
+  height: 70px;
+  border: 1px solid;
+  margin: 10px;
+  float: left;
+}
+.wenzi a {
+  background-color: bisque;
+  display: block;
+  width: 40px;
+  height: 20px;
+  color: red;
+  /* 链接去除下划线 */
+  text-decoration: none;
+  /* 文字水平居中 */
+  text-align: center;
+  /* 行高与元素高度相同就会垂直居中 */
+  line-height: 20px;
+}

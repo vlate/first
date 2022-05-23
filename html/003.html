@@ -1,0 +1,116 @@
+<!-- css选择器 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 外部样式 -->
+    <link rel="stylesheet" href="css/001.css" />
+
+    <!-- css 可添加到head里的style标签-->
+    <style>
+      /* 元素选择器 */
+      h1 {
+        /* 常用属性如：font-size color width height
+          background-color text-align line-height */
+        color: rgb(234, 179, 145);
+      }
+      /* 类选择器，指定数种元素 */
+      .class1 {
+        color: rgb(243, 236, 45);
+      }
+      .box1,
+      .box2,
+      .box4 {
+        background-color: rgb(252, 248, 243);
+        width: 200px;
+        height: auto;
+      }
+      /* ID选择器 只指定一个元素*/
+      #id1 {
+        color: brown;
+      }
+      /* 通配符选择器:"*"所有元素 */
+      * {
+        color: rgb(70, 83, 57);
+      }
+      /* 层级选择器 selector1 selector2 ,以空格分开两种选择器*/
+      .box1 h4 {
+        color: rgb(255, 231, 75);
+        /* 只对.box1里的h4起作用 */
+      }
+      /* 组合选择器 selector1,selector2 */
+      h5,
+      .box2 h6 {
+        color: rgba(56, 74, 48, 0.148);
+        /* 同时对box1和box2里的h5起作用，和只对box2里h6起作用 */
+      }
+      /* 伪类选择器（增加行为）：selector：hover鼠标悬浮*/
+      .box3 {
+        height: 70px;
+        width: 100px;
+        background-color: rgb(255, 255, 255);
+      }
+
+      .box3:hover {
+        background-color: #f9b1b1;
+      }
+      .button:hover {
+        background-color: brown;
+      }
+
+      /*伪元素选择器（增加元素）selector::after selector::before */
+      /* 单独书写方式 */
+      .class2::before {
+        content: "----";
+      }
+      /* 组合方式书写 */
+      .class3::after,
+      .class3::before {
+        content: "----";
+        color: rgb(255, 0, 0);
+      }
+      .class4::before,
+      .class5::after {
+        content: "******";
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box4">
+      <h1>元素选择器</h1>
+      <h2 class="class1">类选择器</h2>
+      <h3 id="id1">ID选择器</h3>
+      <p>通配符选择器(改变所有元素)</p>
+      <!-- 内联样式，样式写到标签里 -->
+      <p style="color: blueviolet">hello</p>
+    </div>
+
+    <div class="box1">
+      <h4>层级选择器1</h4>
+      <h5>层级选择器2</h5>
+      <h6>层级选择器3</h6>
+    </div>
+
+    <div class="box2">
+      <h4>组合先择器1</h4>
+      <h5>组合选择器2</h5>
+      <h6>组合选择器2</h6>
+    </div>
+
+    <div class="box4">
+      <div class="box3">伪类选择器</div>
+      <input class="button" type="button" value="按钮(鼠标移入变色)" />
+    </div>
+
+    <div class="box4">
+      <p class="class2">伪元素选择器1</p>
+      <p class="class3">伪元素选择器2</p>
+      <p class="class4">伪元素选择器3</p>
+      <p class="class5">伪元素选择器4</p>
+    </div>
+  </body>
+</html>
