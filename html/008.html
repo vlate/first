@@ -4,6 +4,9 @@
     阴影box-shadow: 10px 10px 10px rgb(0, 0, 0),值分别是：x轴偏移量、y偏移量、模糊半径、阴影颜色
     变形transform:rotate（45deg）、scale（0.5）、translate（10px,20px）,多个变形以空格分开写在一起如
     transform:rotate（45deg） scale（0.5）；
+    过渡transition-property属性如transform、-duration时间（秒s）、-timing-function函数、-delay延迟
+    可以简写以空格隔开：transition：属性 时间 函数 延迟
+    函数包括：
 
  -->
 <!DOCTYPE html>
@@ -30,7 +33,7 @@
       }
       .box1:hover {
         box-shadow: 10px 10px 10px rgb(0, 0, 0);
-        transform: rotate(20deg) scale(0.9);
+        transform: rotate(0deg) scale(1.1);
       }
       /* 通过变形属性使元素居中于网页的功能 */
       .box2 {
